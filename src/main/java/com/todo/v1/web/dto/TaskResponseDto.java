@@ -1,8 +1,11 @@
 package com.todo.v1.web.dto;
 
-
 import com.todo.v1.domain.task.Task;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Getter
+@NoArgsConstructor
 public class TaskResponseDto {
 
     private Long id;

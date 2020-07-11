@@ -36,6 +36,7 @@ public class TaskService {
 
     public List<TaskResponseDto> findAll(String author) {
         List<Task> taskList = taskRepository.findAllByAuthor(author);
+
         List<TaskResponseDto> response = new ArrayList<TaskResponseDto>();
         for(Task i : taskList){
             response.add(new TaskResponseDto(i));
@@ -43,6 +44,7 @@ public class TaskService {
         return response;
     }
 
+    @Transactional
     public void delete(Long id) {
         taskRepository.deleteById(id);
     }

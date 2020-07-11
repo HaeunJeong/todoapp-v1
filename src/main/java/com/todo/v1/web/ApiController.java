@@ -39,6 +39,13 @@ public class ApiController {
         taskService.update(id,requestDto);
     }
 
+    /*
+     * description: TODO리스트의 Task를 삭제한다
+     * method: GET
+     * url: /api/v1/deleteTask/{id}
+     * param: id(Long)
+     * return: void
+     */
     @GetMapping("/api/v1/deleteTask/{id}")
     public void deleteTask(@PathVariable Long id){
         taskService.delete(id);
