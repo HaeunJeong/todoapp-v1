@@ -46,6 +46,12 @@ public class TaskService {
 
     @Transactional
     public void delete(Long id) {
-        taskRepository.deleteById(id);
+        if(taskRepository.existsById(id)) {
+            taskRepository.deleteById(id);
+        }
+        else{
+            throw new IllegalArgumentException("해당 Task가 없습니다. id="+id);
+        }
+
     }
 }
