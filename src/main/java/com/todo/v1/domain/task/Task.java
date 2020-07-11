@@ -21,16 +21,21 @@ public class Task {
     private String author;
 
     @Column(columnDefinition = "TEXT", nullable = false)
-    private String task;
+    private String content;
 
-    @Column(length = 1, nullable = false)
+    @Column(nullable = false)
     private String status;
 
     @Builder
-    public Task(String author, String task){
+    public Task(String author, String content){
         this.author = author;
-        this.task = task;
+        this.content = content;
         this.status = "C";
+    }
+
+    public void update(String content, String status){
+        this.content = content;
+        this.status = status;
     }
 
 }

@@ -24,12 +24,12 @@ public class TaskRepositoryTest {
     }
 
     @Test
-    public void TASK생성하기(){
-        String task = "공부하기!! ";
+    public void Task_생성하기(){
+        String content = "공부하기!! ";
         String author = "haeun";
 
         taskRepository.save(Task.builder()
-                .task(task)
+                .content(content)
                 .author(author)
                 .build()
         );
@@ -39,7 +39,7 @@ public class TaskRepositoryTest {
 
         //Then
         Task thisTask = taskList.get(0);
-        assertThat(thisTask.getTask()).isEqualTo(task);
+        assertThat(thisTask.getContent()).isEqualTo(content);
         assertThat(thisTask.getAuthor()).isEqualTo(author);
 
 

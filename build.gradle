@@ -34,13 +34,13 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-mustache')
     compile('com.h2database:h2')
 
-    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+    //compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     compile('org.springframework.session:spring-session-jdbc')
 
     compile("org.mariadb.jdbc:mariadb-java-client")
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile("org.springframework.security:spring-security-test")
+    //testCompile("org.springframework.security:spring-security-test")
 
     //Test코드에서 error: cannot find symbol 에러가 나 추가한 dependency
     annotationProcessor('org.projectlombok:lombok')
